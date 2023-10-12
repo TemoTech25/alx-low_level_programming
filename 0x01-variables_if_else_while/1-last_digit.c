@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /*
- * Main - print the last digit of the number stored in the variable n at random
+ * Main - Prints the last digit of the number stored in the variable 'n' at random
  * and determine whether n is great than 5, if it is 0, less than 6 not zero
  *
  * Return: Always 0
