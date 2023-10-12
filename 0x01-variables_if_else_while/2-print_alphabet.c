@@ -3,7 +3,7 @@
 /**
 * main - Prints the alphabet in lowercase, followed by a new line.
 *
-* Returns: Written character 0
+* Return: Always 0 (Success)
 */
 
 int main(void)
