@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /*
- * main - Prints the last digit of a random ggenerated number
+ * main - Prints the last digit of a random generated number
  * and whether it is great than 5, if it is 0, less than 6
  *
  * Return: Always 0
