@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point,  Prints the last digit of a random generated number
  * and whether it is great than 5, if it is 0, less than 6
  *
