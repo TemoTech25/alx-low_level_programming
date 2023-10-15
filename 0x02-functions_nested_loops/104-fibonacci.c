@@ -4,7 +4,7 @@
  * main - print main block
  * Description: program the sum of aall the multiples of 3 or
  * 5 below 1024
- * follow with new line 
+ * follow with new line
  *
  * Return: 0 (success)
  */
@@ -21,7 +21,7 @@ int main(void)
 		b = next;
 		printf("%lu", next);
 
-		if (i <97)
+		if (i < 97)
 			printf(", ");
 		i++;
 	}
