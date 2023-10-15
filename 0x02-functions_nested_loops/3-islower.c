@@ -2,7 +2,7 @@
 
 /**
  * _islower - Checks for lowercase alphabet
- * Char must be checked
+ * @c: Char must be checked
  * Return: 0 (win)
  */
 
