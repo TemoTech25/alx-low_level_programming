@@ -4,7 +4,7 @@
  * main - Entry point
  * followed by new line
  *
- * Return 0 (win)
+ * Return: 0 (win)
  */
 
 int main(void)
