@@ -1,14 +1,15 @@
 #include "main.h"
-
 /**
- * mul - multiply 2 int
- * @a: first int
- * @b: second int
+ * _isdigit - look for if numbers are 0 - 9
+ * @c: char to be checked
  *
- * Return: addition of the multiplicattion
+ * Return: 0 (win)
  */
 
-int mul(int a, int b)
+int _isdigit(int c)
 {
-	return (a * b);
+	if (c >= '0' && c <= '9')
+	return (1);
+	else
+	return (0);
 }
