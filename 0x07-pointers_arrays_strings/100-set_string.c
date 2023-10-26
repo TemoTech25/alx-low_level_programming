@@ -2,7 +2,7 @@
 
 /**
  * set_string - print sets the value 
- * @s: rite pointaaother pointer 
+ * @s: write point other pointer
  * @to: pointer char
  */
 
