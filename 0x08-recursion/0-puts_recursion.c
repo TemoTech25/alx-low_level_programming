@@ -2,7 +2,7 @@
 
 /**
  *  _puts_recursion - print function like puts();
- *  @s: the input 
+ *  @s: the input
  *
  *  Return: 0 (success)
  */
