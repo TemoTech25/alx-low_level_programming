@@ -12,7 +12,7 @@ char **strtow(char *str)
 {
     char **words;
     char *token;
-    int i, j, k, word_count = 0, len = 0;
+    int i, j, word_count = 0, len = 0;
 
     if (str == NULL || str[0] == '\0')
         return (NULL);
