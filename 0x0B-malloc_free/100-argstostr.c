@@ -1,6 +1,6 @@
 #include "main.h"
-		
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * argstostr - main entry
@@ -18,8 +18,8 @@ char *argstostr(int ac, char **av)
         return (NULL);
     for (i = 0; i < ac; i++)
         total_length += strlen(av[i]);
-    total_length += ac;  // Add the count of arguments for the newline characters
-    s = malloc((total_length + 1) * sizeof(char));  // Add 1 for the null terminator
+    total_length += ac;
+    s = malloc((total_length + 1) * sizeof(char));
     if (s == NULL)
         return (NULL);
     k = 0;
@@ -33,6 +33,6 @@ char *argstostr(int ac, char **av)
         s[k] = '\n';
         k++;
     }
-    s[k] = '\0';  // Null terminate the string
+    s[k] = '\0';
     return (s);
 }
