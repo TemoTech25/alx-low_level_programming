@@ -13,10 +13,16 @@ int main(int argc, char *argv[])
 {
 	int cents, count;
 
-	if (argc != 2 || (cents = atoi(argv[1])) < 0)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
+	}
+	cents = atoi(argv[1]);
+	if (cents < 0)
+	{
+		printf("0\n");
+		return (0);
 	}
 
 	count = 0;
@@ -40,11 +46,8 @@ int main(int argc, char *argv[])
 		cents -= 2;
 		count++;
 	}
-	while (cents >= 1)
-	{
-		cents -= 1;
-		count++;
-	}
+	cents >= 1 ? count++ : 0;
+
 	printf("%d\n", count);
 	return (0);
 }
