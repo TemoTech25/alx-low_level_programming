@@ -75,8 +75,7 @@ int main(int argc, char *argv[])
     num1 = atoll(argv[1]);
     num2 = atoll(argv[2]);
 
-    printf("%lld\n", mul(argv[1], argv[2]));
+    printf("%lld\n", num1 * num2);
 
     return (0);
 }
-
