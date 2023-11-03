@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "main.h"
 
 /**
  * is_digit - checks if a string contains only digits
@@ -79,4 +78,3 @@ int main(int argc, char *argv[])
 
     return (0);
 }
-
