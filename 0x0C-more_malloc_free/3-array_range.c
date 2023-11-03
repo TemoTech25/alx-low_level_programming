@@ -9,20 +9,21 @@
  *
  * Return: pointer to the newly created array, or NULL if min > max or malloc fails
  */
+
 int *array_range(int min, int max)
 {
-    int *array;
-    int i;
+	int *array;
+	int i;
 
-    if (min > max)
-        return (NULL);
+	if (min > max)
+		return (NULL);
 
-    array = malloc((max - min + 1) * sizeof(int));
-    if (!array)
-        return (NULL);
+	array = malloc((max - min + 1) * sizeof(int));
+	if (!array)
+		return (NULL);
 
-    for (i = 0; min <= max; min++, i++)
-        array[i] = min;
+	for (i = 0; min <= max; min++, i++)
+		array[i] = min;
 
-    return (array);
+	return (array);
 }
