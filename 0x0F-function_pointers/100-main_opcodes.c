@@ -30,9 +30,15 @@ int main(int argc, char *argv[])
     ptr = (unsigned char *)main;
 
     for (i = 0; i < num_bytes; i++)
+    {
+	     if (i == bytes - 1)
+	     {
         printf("%02x", ptr[i]);
+	break;
+	     }
 
     printf("\n");
+    }
 
     return (0);
 }
