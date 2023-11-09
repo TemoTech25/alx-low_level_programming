@@ -1,0 +1,44 @@
+#include "3-calc.h"
+#include "function_pointers.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * main - performs simple operations
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, error code on failure
+ */
+int main(int argc, char *argv[])
+{
+	int num1, num2;
+	int (*f)(int, int);
+
+	if (argc != 4)
+	{
+		printf("Error\n");
+		return (98);
+	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	f = get_op_func(argv[2]);
+
+	if (f == NULL)
+	{
+		printf("Error\n");
+		return (99);
+	}
+
+	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
+	{
+		printf("Error\n");
+		return (100);
+	}
+
+	printf("%d\n", f(num1, num2));
+
+	return (0);
+}
