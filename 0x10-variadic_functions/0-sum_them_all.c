@@ -10,18 +10,18 @@
  * Example:
  *   sum_them_all(4, 98, 1024, 402, -1024); --> 500
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
-  va_list args;
-  va_start(args, n);
+ va_list ap;
+ unsigned int i, sum = 0;
 
-  int sum = 0;
-  for (unsigned int i = 0; i < n; i++)
-  {
-      sum += va_arg(args, int);
-  }
+ va_start(ap, n);
 
-  va_end(args);
+ for (i = 0; i < n; i++)
+   sum += va_arg(ap, int);
 
-  return sum;
+ va_end(ap);
+
+ return (sum);
 }
