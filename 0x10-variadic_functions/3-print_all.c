@@ -11,44 +11,42 @@
  * Example:
  * print_all("ceis", 'B', 3, "stSchool"); --> "B, 3, stSchool\n"
  */
+
 void print_all(const char * const format, ...)
 {
- va_list args;
- char *str;
- unsigned int index;
+ va_list list;
+ char *str, *sep = "";
+ int i = 0;
 
- va_start(args, format);
+ va_start(list, format);
 
- while (*format != '\0')
+ while (format[i])
  {
-   if (*format == 'c')
+   switch (format[i])
    {
-     printf("%c", va_arg(args, int));
+     case 'c':
+       printf("%s%c", sep, va_arg(list, int));
+       break;
+     case 'i':
+       printf("%s%d", sep, va_arg(list, int));
+       break;
+     case 'f':
+       printf("%s%f", sep, va_arg(list, double));
+       break;
+     case 's':
+       str = va_arg(list, char *);
+       if (!str)
+         str = "(nil)";
+       printf("%s%s", sep, str);
+       break;
+     default:
+       i++;
+       continue;
    }
-   else if (*format == 'i')
-   {
-     printf("%d", va_arg(args, int));
-   }
-   else if (*format == 'f')
-   {
-     printf("%f", va_arg(args, double));
-   }
-   else if (*format == 's')
-   {
-     str = va_arg(args, char *);
-     if (str == NULL)
-     {
-       printf("(nil)");
-     }
-     else
-     {
-       printf("%s", str);
-     }
-   }
-   format++;
+   sep = ", ";
+   i++;
  }
 
  printf("\n");
-
- va_end(args);
+ va_end(list);
 }
