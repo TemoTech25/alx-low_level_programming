@@ -7,7 +7,7 @@
 /**
  * struct listint_s - More singly linked list
  * @n: int
- * @next:directs to the following node
+ * @next: directs to the following node
  *
  * Description: print More singly linked lists
  *
@@ -15,8 +15,8 @@
 
 typedef struct listint_s
 {
- int n;
- struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 
