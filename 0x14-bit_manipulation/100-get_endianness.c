@@ -7,12 +7,10 @@
  */
 int get_endianness(void)
 {
-	union {
-		long int i;
-		char c[sizeof(long int)];
-	} u;
+	int a;
+	char *b;
 
-	u.i = 1;
-
-	return (u.c[sizeof(long int) - 1] == 1);
+	a = 1;
+	b = (char *)&a;
+	return (*b);
 }
