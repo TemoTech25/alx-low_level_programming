@@ -7,10 +7,10 @@
 #define BUFFER_SIZE 1024
 
 /**
- * cp - copies the content of a file to another file.
+ * error_file - checks if files can be opened.
  * @file_from: the name of the source file.
  * @file_to: the name of the destination file.
- *
+ * @argv: arguments vector
  * Return: 0 on success and -1 on failure.
  * If the number of arguments is not correct, exit with code 97.
  * If file_from does not exist or cannot be read, exit with code 98.
